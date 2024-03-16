@@ -22,7 +22,7 @@ public:
         head = 0;
     }
     void addtohead(int n);
-	void count();
+    void count();
     void deletefromhead();
     void insert(int index,int n);
     void Delete(int n);
