@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-// Function to check if a string is palindrome
+
 int hcf(int a,int b)
 {
 	if(a==b){
