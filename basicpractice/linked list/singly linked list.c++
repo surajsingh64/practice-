@@ -66,28 +66,30 @@ void SLL::deletefromhead()
 		delete p;
 	}
 }
-void SLL::insert(int index,int x)
-{
-	if(index==1)
-	addtohead(x);
-	else{
-		node*in=new node(x);
-		int count=1;
-		node*p=head;
-		node*prev=0;
-		while(p!=0&&count!=index)
-		{
-			prev=p;
-			p=p->next;
-			count++;
-		}
-		if (count != index) {
+void SLL::insert(int index, int x) {
+    if (index == 1)
+        addtohead(x);
+    else {
+        node* in = new node(x);
+        int count = 1;
+        node* p = head;
+        node* prev = nullptr;
+        while (p != nullptr && count != index) {
+            prev = p;
+            p = p->next;
+            count++;
+        }
+        if (count != index) {
             cout << "Invalid index" << endl;
             delete in;
             return;
         }
-	}
+        // Insert node in between prev and p
+        prev->next = in;
+        in->next = p;
+    }
 }
+
 void SLL::count()
 {
 if(head==0)
