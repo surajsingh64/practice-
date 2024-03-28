@@ -73,8 +73,8 @@ void SLL::insert(int index, int x) {
         node* in = new node(x);
         int count = 1;
         node* p = head;
-        node* prev = nullptr;
-        while (p != nullptr && count != index) {
+        node* prev = 0;
+        while (p != 0 && count != index) {
             prev = p;
             p = p->next;
             count++;
